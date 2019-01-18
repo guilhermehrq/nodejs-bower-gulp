@@ -10,10 +10,10 @@ LABEL maintainer "Guilherme Henrique <guilherme_hrq99@outlook.com>"
 # Install Bower & Gulp
 RUN npm install -g bower gulp
 
-# Install bash on alpine
-RUN apk --update bash 
+# Install GIT on Alpine
+RUN apk add --no-cache git
 
-# Install bash
+# Install bash on Alpine
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
 # Define working directory.
